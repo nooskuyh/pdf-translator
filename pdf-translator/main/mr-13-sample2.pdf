@@ -1,0 +1,45 @@
+D. Kreuzberger 외: 머신러닝 운영(MLOps): 개요, 정의 및 아키텍처
+
+[24] I. Karamitsos, S. Albarhami, C. Apostolopoulos, "머신러닝을 위한 지속적 자동화의 데브옵스 적용," 정보, 11(7), 1–15, 2020, doi:10.3390/info11070363.
+[25] A. Goyal, "MLOps 머신러닝 운영," Int. J. Inf. Technol. Insights Transformations, 4(2), 2020. 2021년 4월 15일 접속. [온라인]. 사용 가능: http://technology.eurekajournals.com/˙index.php/IJITIT/article/view/655
+[26] D.A. Tamburri, "지속 가능한 MLOps: 경향 및 도전," 22nd Int. Symp.(Symbolic Numeric Algorithms Sci. Comput.), 2020년 9월, 17–23, doi:10.1109/SYNASC51798.2020.00015.
+[27] O. Spjuth, J. Frid, A. Hellander, "머신러닝 라이프사이클과 클라우드: 의약품 발견에 대한 함의," Expert Opin Drug Discovery, 16(9), 1071–1079, 2021, doi: 10.1080/17460441.2021.1932812.
+[28] B. Derakhshan et al., "머신러닝 파이프라인의 지속적 배포," Proc. EDBT, 2019년 3월, 397–408, doi:10.5441/002/edbt.2019.35.
+[29] R.R. Karn et al., "클라우드 네트워크 분석을 위한 머신러닝 모델의 동적 자동 선택 및 튜닝," IEEE Trans. Parallel Distrib. Syst., 30(5), 1052–1064, 2019년 5월, doi:10.1109/TPDS.2018.2876844.
+[30] S. Shalev-Shwartz, "온라인 학습 및 온라인 볼록 최적화," Found. Trends Mach. Learn., 4(2), 107–194, 2012.
+[31] A. Molner Domenech, A. Guillén, "Ml-experiment: 재현 가능한 데이터 과학을 위한 파이썬 프레임워크," J. Phys., Conf. Ser., 1603(1), 2020년 9월, Art. no. 012025, doi:10.1088/1742-6596/1603/1/012025.
+[32] S. Makinen et al., "누가 MLOps가 필요한가: 데이터 과학자가 달성하고자 하는 것과 MLOps의 도움," Proc. IEEE/ACM 1st Workshop AI Eng. Softw. Eng. AI(WAIN), 2021년 5월, 109–112.
+[33] L.C. Silva et al., "제품 내 머신러닝 솔루션 벤치마킹," 19th IEEE Int. Conf. Mach. Learn. Appl.(ICMLA), 2020년 12월, 626–633, doi:10.1109/ICMLA51294.2020.00104.
+[34] A. Banerjee et al., "하이브리드-클라우드 엔터프라이즈 소프트웨어 배포에서 MLOps의 도전과 경험," OpML USENIX Conf. Oper. Mach. Learn., 2020, 7–9.
+[35] B. Benni et al., "DevOps가 메타-러닝을 만났을 때," ACM/IEEE 22nd Int. Conf. Model Driven Eng. Lang. Syst. Companion(MODELS-C), 2019년 9월, 605–612, doi:10.1109/MODELS-C.2019.00092.
+[36] C. Vuppalapati et al., "Microsoft Azure를 사용한 지능형 센서 DevOPS 자동화," IEEE Int. Conf. Big Data(BigData), 2020년 12월, 2375–2384, doi:10.1109/BigData50022.2020.9377755.
+[37] Á.L. García et al., "클라우드 기반 머신러닝 작업 및 애플리케이션 프레임워크," IEEE Access, 8, 18681–18692, 2020, doi:10.1109/ACCESS.2020.2964386.
+[38] C. Wu, E. Haihong, M. Song, "쿠버네티스를 기반으로 한 자동 인공지능 트레이닝 플랫폼," Proc. 2nd Int. Conf. Big Data Eng. Technol., 2020년 1월, 58–62, doi:10.1145/3378904.3378921.
+[39] G. Fursin, "공동 지식: 재사용 가능한 구성 요소와 포터블 워크플로우로 연구 프로젝트 구성," Phil. Trans. Roy. Soc. A, 379(2197), 2021년 5월, Art. no. 20200211, doi:10.1098/rsta.2020.0211.
+[40] M. Schmitt, "Airflow, Luigi, Argo, MLFlow, KubeFlow 비교," Tech. Rep., 2022. [온라인]. 사용 가능: https://www.datarevenue.com/en-˙blog/airflow-vs-luigi-vs-argo-vs-mlflow-vs-kubeflow
+[41] K. Shvachko et al., "Hadoop 분산 파일 시스템," IEEE 26th Symp. Mass Storage Syst. Technol.(MSST), 2010년 5월, 1–10.
+[42] S. Ghemawat et al., "Google 파일 시스템," Proc. 19th ACM Symp. Operating Syst. Princ., 2003년 10월, 29–43.
+[43] A. Lakshman, P. Malik, "Cassandra: 분산 구조 저장 시스템," ACM SIGOPS Oper. Syst. Rev., 44(2), 35–40, 2010년 4월.
+[44] J.C. Corbett, "Spanner: 글로벌 분산 데이터베이스," ACM Trans. Comput. Syst.(TOCS), 31(3), 1–22, 2013.
+[45] Y. Liu et al., "오픈소스 프레임워크를 이용한 머신러닝 운영 플랫폼 구축," IFAC-PapersOnLine, 53(5), 704–709, 2020, doi:10.1016/j.ifacol.2021.04.161.
+[46] G. S. Yoon et al., "클라우드-네이티브 머신러닝 워크플로우를 활용한 SmartX AI 클러스터 위한 DevOps 포털 디자인," vol.47. Cham, Switzerland: Springer, 2020, doi:10.1007/978-3-030-39746-3_54.
+[47] I. Hubara et al., "양자화된 신경망: 저정밀 가중치 및 활성화로 신경망 학습," J. Mach. Learn. Res., 18(1), 6869–6898, 2017.
+[48] S. Han et al., "딥 컴프레션: 가지치기, 훈련 양자화 및 허프만 코딩을 통한 심층 신경망 압축," 2015, arXiv:1510.00149.
+[49] L. E. Lwakatare et al., "AI를 위한 DevOps—AI 구현 애플리케이션 개발의 도전," Int. Conf. Softw., Telecom. Comput. Netw.(SoftCOM), 2020년 9월, 1–6, doi:10.23919/SoftCOM50211.2020.9238323.
+[50] C. Renggli et al., "데이터 품질 중심의 MLOps 시각," 2021, arXiv:2102.07750.
+[51] W.J. vanden Heuvel, D.A. Tamburri, "지능형 엔터프라이즈 애플리케이션을 위한 모델 기반 ML-Ops," vol.391. Cham, Switzerland: Springer, 2020, doi:10.1007/978-3-030-52306-0_11.
+[52] A. Esmaeilzadeh et al., "Apache Spark를 활용한 대규모 NLP 특징 엔지니어링," IEEE 12th Annu. Comput. Commun. Workshop Conf.(CCWC), 2022년 1월, 274–280.
+[53] J. Xu, "금융 산업에서의 MLOps: 철학, 실습, 도구," Future and Fintech, the, Abcdi and Beyond. Singapore: World Scientific, 2022, p. 451, doi:10.1142/9789811250903_0014.
+[54] F. Carcillo et al., "Spark1을 활용한 스트리밍 신용카드 사기 탐지를 위한 SCARFF?: 확장 가능한 프레임워크," 2023년 2월 17일 접속. [온라인]. 사용 가능: https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
+[55] J. Dhanalakshmi, N. Ayyanathan, "SRLDC(남부 지역 로드 디스패치 센터)에서의 동적 웹 데이터 추출 및 ETL 도구를 사용한 피처 엔지니어링," Int. Conf. Artif. Intell., Adv. Appl. Springer, 2022, 443–449, doi:10.1007/978-981-16-6332-1_38.
+[56] J. Foster, J. Wagner, "초보 NLP 코스를 위한 Jupyter Notebook 과제에서의 나이브 베이즈 대 BERT," 5th Workshop Teaching(NLP), 2021, 112–114.
+[57] J.S. Obeid et al., "COVID-19 감염 위험 평가에 대한 인공지능 접근법: 가상 방문 사례 보고," J. Amer. Med. Inform. Assoc., 27(8), 1321–1325, 2020년 8월.
+[58] M. Aljabri et al., "머신러닝 모델을 사용한 가짜 뉴스 탐지," 14th Int. Conf. Comput. Intell. Commun. Netw.(CICN), 2022년 12월, 473–477.
+[59] L. Baier et al., "변화에 대처하는 방법?—예측 서비스의 시간이 흐름에 따른 유효성 유지," Annu. Hawaii Int. Conf. Syst. Sci., 2019, 1–10.
+[60] L. Baier et al., "개념 드리프트를 신경망 모델 불확실성으로 탐지," 2021, arXiv:2107.01873.
+[61] N. Antonio et al., "머신러닝 분류 모델을 사용한 호텔 예약 취소 예측," 16th IEEE Int. Conf. Mach. Learn. Appl.(ICMLA), 2017년 12월, 1049–1054, doi:10.1109/ICMLA.2017.00-11.
+[62] T. Cui et al., "지능형 온라인 마케팅 시스템 구축: 개요," IEEE Internet Comput., 23(4), 53–60, 2019년 7월.
+[63] L. Baier, S. Seebacher, "배포의 도전과제," 27th Eur. Conf. Inf. Syst.(ECIS), 2019년 6월, 1–15. [온라인]. 사용 가능: https://aisel.aisnet.org/ecis2019_rp/163
+[64] P. Ruf et al., "MLOps의 비밀을 밝히고 오픈소스 도구 선택에 대한 레시피 제시," Appl. Sci., 11(19), p. 8861, 2021년 9월.
+[65] N. Hewage, D. Meedeniya,"머신러닝 운영: MLOps 도구 지원 설문 조사," 2022, arXiv:2202.10169.
+[66] B. Karlaš et al., "머신러닝을 위한 지속적인 통합 서비스 구축," 26th ACM SIGKDD Int. Conf. Knowl. Discovery Data Mining, 2020년 8월, 2407–2415, doi:10.1145/3394486.3403290.
