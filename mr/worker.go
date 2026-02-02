@@ -88,13 +88,18 @@ func Worker(mapf func(string, string) PageKV,
 					log.Fatalf("write newline to %q: %v", filePath, err)
 				}
 			}
-
+			args.WorkType = 1
+			args.FileName = reply.FileName
+			args.PageNum = reply.PageNum
+			DoneCall(&args, &reply)
 		}
 
 		if reply.WorkType == 2 {
-
-			fmt.Println("Get Reduce")
+			fmt.Println("Get Reduce----")
 			reducef(reply.FileName, []string{})
+			args.WorkType = 2
+			args.FileName = reply.FileName
+			DoneCall(&args, &reply)
 		}
 
 		if reply.WorkType == 3 {
@@ -102,15 +107,32 @@ func Worker(mapf func(string, string) PageKV,
 		}
 	}
 
-	fmt.Println("Eliminated")
+	fmt.Println("GoodBye!")
 }
 
 func MyCall(args *Args, reply *Reply) {
+	fmt.Printf("Calling...(Task Request): %v\n", args.WorkType)
 	ok := call("Coordinator.Receiving", &args, &reply)
 	if ok {
-		fmt.Printf("worktype: %v\n", reply.WorkType)
-		fmt.Printf("filename: %v\n", reply.FileName)
-		fmt.Printf("PageNum: %v\n", reply.PageNum)
+		if reply.FileName == "" {
+			// fmt.Print("Task Waiting...")
+			return
+		}
+		fmt.Printf("- worktype: %v\n", reply.WorkType)
+		fmt.Printf("- filename: %v\n", reply.FileName)
+		fmt.Printf("- PageNum: %v\n", reply.PageNum)
+	} else {
+		fmt.Printf("call failed!\n")
+	}
+}
+
+func DoneCall(args *Args, reply *Reply) {
+	fmt.Printf("Calling...(Task Done): %s, %s, %v\n", args.FileName, args.PageNum, args.WorkType)
+	ok := call("Coordinator.Receiving", &args, &reply)
+	if ok {
+		fmt.Printf("- worktype: %v\n", reply.WorkType)
+		fmt.Printf("- filename: %v\n", reply.FileName)
+		fmt.Printf("- PageNum: %v\n", reply.PageNum)
 	} else {
 		fmt.Printf("call failed!\n")
 	}
@@ -121,18 +143,25 @@ func MyCall(args *Args, reply *Reply) {
 // returns false if something goes wrong.
 func call(rpcname string, args interface{}, reply interface{}) bool {
 	// c, err := rpc.DialHTTP("tcp", "127.0.0.1"+":1234")
-	sockname := coordinatorSock()
-	c, err := rpc.DialHTTP("unix", sockname)
+	//sockname := coordinatorSock()
+
+	addr := os.Getenv("MR_COORD_ENDPOINT")
+	if addr == "" {
+		addr = "mr-master:1234"
+	}
+
+	c, err := rpc.DialHTTP("tcp", addr)
 	if err != nil {
-		log.Fatal("dialing:", err)
+		log.Printf("dialing: %v", err)
+		return false
 	}
 	defer c.Close()
 
 	err = c.Call(rpcname, args, reply)
-	if err == nil {
-		return true
+	if err != nil {
+		log.Printf("rpc call %s error: %v", rpcname, err)
+		return false
 	}
 
-	fmt.Println(err)
-	return false
+	return true
 }

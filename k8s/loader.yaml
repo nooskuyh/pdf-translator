@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mr-loader
+  namespace: mr
+spec:
+  containers:
+    - name: loader
+      image: busybox:1.36
+      command: ["tail", "-f", "/dev/null"]
+      volumeMounts:
+        - name: data
+          mountPath: /data
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: mr-data

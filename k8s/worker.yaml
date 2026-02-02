@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mr-worker
+  namespace: mr
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mr-worker
+  template:
+    metadata:
+      labels:
+        app: mr-worker
+    spec:
+      containers:
+        - name: worker
+          image: my-mr:0.1
+          imagePullPolicy: IfNotPresent
+          command: ["/app/mrworker"]
+          args: ["/app/llm.so"]
+          env:
+            - name: MR_COORD_ENDPOINT
+              value: "mr-master:1234"
+          volumeMounts:
+            - name: data
+              mountPath: /data
+              readOnly: true
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: mr-data

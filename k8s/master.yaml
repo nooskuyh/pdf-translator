@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mr-master
+  namespace: mr
+spec:
+  selector:
+    app: mr-master
+  ports:
+    - name: rpc
+      port: 1234
+      targetPort: 1234
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mr-master
+  namespace: mr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mr-master
+  template:
+    metadata:
+      labels:
+        app: mr-master
+    spec:
+      containers:
+        - name: master
+          image: my-mr:0.1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MR_LISTEN_ADDR
+              value: "0.0.0.0:1234"
+          ports:
+            - containerPort: 1234
+          args: ["/data/input.pdf"]
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: mr-data
