@@ -32,6 +32,8 @@ COPY --from=builder /out/mrcoordinator /app/mrcoordinator
 COPY --from=builder /out/mrworker /app/mrworker
 COPY --from=builder /out/llm.so /app/llm.so
 
+COPY fonts /fonts
+
 ENV PLUGIN_PATH=/app/llm.so
 
 EXPOSE 8080

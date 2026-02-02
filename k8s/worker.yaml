@@ -1,32 +1,34 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: batch/v1
+kind: Job
 metadata:
   name: mr-worker
   namespace: mr
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: mr-worker
   template:
-    metadata:
-      labels:
-        app: mr-worker
     spec:
       containers:
         - name: worker
-          image: my-mr:0.1
+          image: my-mr:0.3
           imagePullPolicy: IfNotPresent
           command: ["/app/mrworker"]
           args: ["/app/llm.so"]
+          workingDir: /data
           env:
             - name: MR_COORD_ENDPOINT
               value: "mr-master:1234"
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: openai-secret
+                  key: OPENAI_API_KEY
           volumeMounts:
             - name: data
               mountPath: /data
-              readOnly: true
+      restartPolicy: OnFailure
       volumes:
         - name: data
           persistentVolumeClaim:
             claimName: mr-data
+  parallelism: 3
+  completions: 3
+  backoffLimit: 4
