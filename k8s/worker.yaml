@@ -29,6 +29,6 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: mr-data
-  parallelism: 3
-  completions: 3
+  parallelism: 10
+  completions: 10
   backoffLimit: 4
