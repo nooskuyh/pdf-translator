@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: my-mr:0.3
+          image: my-mr:0.4
           imagePullPolicy: IfNotPresent
           command: ["/app/mrworker"]
           args: ["/app/llm.so"]

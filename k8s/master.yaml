@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: my-mr:0.3
+          image: my-mr:0.4
           imagePullPolicy: IfNotPresent
           env:
             - name: MR_LISTEN_ADDR

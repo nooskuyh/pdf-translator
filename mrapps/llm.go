@@ -57,7 +57,7 @@ func Map(pagenumber string, contents string) mr.PageKV {
 	fmt.Println("API Call (start)")
 
 	resp, err := c.Responses.New(ctx, responses.ResponseNewParams{
-		Model:        "gpt-4o",
+		Model:        "o4-mini",
 		Instructions: openai.String("이 내용을 자연스러운 한글로 번역, 깔끔하게 하나의 Pdf 페이지에 들어갈 수 있는 문자열로"),
 		Input: responses.ResponseNewParamsInputUnion{
 			OfString: openai.String(contents),
@@ -127,7 +127,7 @@ func CombineToPDF(filename string) error {
 
 	sort.SliceStable(items, func(a, b int) bool { return items[a].i < items[b].i })
 
-	outPDF := filename + ".pdf"
+	outPDF := "traslated_" + filename
 	const family = "NotoSansKR"
 
 	regularPath := "../fonts/NotoSansKR-Regular.ttf"
