@@ -1,6 +1,7 @@
 # PDF Translator Map-Reduce
 
 PDF Translator Map-Reduce is a distributed PDF translation system designed to run on Kubernetes (Minikube) using RPC.
+
 ---
 
 ## Prerequisites
