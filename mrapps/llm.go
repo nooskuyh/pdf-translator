@@ -127,7 +127,7 @@ func CombineToPDF(filename string) error {
 
 	sort.SliceStable(items, func(a, b int) bool { return items[a].i < items[b].i })
 
-	outPDF := "traslated_" + filename
+	outPDF := "translated_" + filename
 	const family = "NotoSansKR"
 
 	regularPath := "../fonts/NotoSansKR-Regular.ttf"
