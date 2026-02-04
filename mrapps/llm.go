@@ -1,6 +1,6 @@
 package main
 
-// a word-count application "plugin" for MapReduce.
+// an LLM translation application "plugin" for MapReduce.
 //
 // go build -buildmode=plugin wc.go
 // go get github.com/openai/openai-go/v3
