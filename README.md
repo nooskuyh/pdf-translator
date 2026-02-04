@@ -13,7 +13,7 @@ PDF Translator Map-Reduce is a distributed PDF translation system designed to ru
 
 ---
 
-## Initial Setup (Run Once)
+## Initial Setup
 
 Create the required Kubernetes resources.
 
