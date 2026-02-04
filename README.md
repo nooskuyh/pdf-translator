@@ -9,7 +9,6 @@ PDF Translator Map-Reduce is a distributed PDF translation system designed to ru
 - Docker
 - Minikube
 - kubectl
-- Git
 - OpenAI API key
 
 ---
